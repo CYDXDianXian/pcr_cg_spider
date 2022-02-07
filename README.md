@@ -15,5 +15,5 @@ pcr剧情CG爬虫
 # 使用方法
 
 1. 安装依赖：`pip install -r requirements.txt`
-2. 运行爬虫程序：`py 干炸里脊pcr剧情CG爬虫_单线程.py`或`py 干炸里脊pcr剧情CG爬虫_异步协程.py`
+2. 运行爬虫程序：`py pcr剧情CG爬虫_单线程.py`或`py pcr剧情CG爬虫_异步协程.py`
 
