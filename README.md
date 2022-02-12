@@ -14,6 +14,6 @@ pcr剧情CG爬虫
 
 # 使用方法
 
-1. 安装依赖：`pip install -r requirements.txt`
-2. 运行爬虫程序：`py pcr剧情CG爬虫_单线程.py`或`py pcr剧情CG爬虫_异步协程.py`
+1. 安装依赖：`install_requirements.bat`
+2. 运行爬虫程序：`run_pcr_cg_spider.bat`或`run_pcr_cg_spider_multithreading.bat`
 
