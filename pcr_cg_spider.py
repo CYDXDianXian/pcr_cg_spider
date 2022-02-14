@@ -4,9 +4,8 @@ import time
 from pathlib import Path
 import sys
 
-path_config = "img"  # 设置图片的保存地址
+path = "img"  # 设置图片的保存地址
 
-path = Path(__file__).parent / path_config # 拼接路径。__file__，是一个字符串，表示当前文件的绝对路径。若不进行该设置，直接运行py文件图片路径会存到C盘system32文件夹下
 Path(path).mkdir(parents = True, exist_ok = True) # parents：如果父目录不存在，是否创建父目录。exist_ok：只有在目录不存在时创建目录，目录已存在时不会抛出异常。
 
 headers = {
@@ -17,6 +16,7 @@ proxy = {}
 # 若不用代理，将链接清空即可。
 
 time_start = time.time()
+print('开始进行爬取，请稍后......\n')
 
 url = "https://redive.estertion.win/card/story/"
 resp = requests.get(url, headers = headers, proxies = proxy) # 以get方式请求url，得到响应赋值给resp。proxies = prox添加代理。verify = False跳过对具有无效证书的站点的验证
@@ -29,7 +29,8 @@ resp.encodin = 'utf-8'
 # 把源码交给bs
 main_page = BeautifulSoup(resp.text, "html.parser")
 alist = main_page.find("body").find_all("a")
-print(f'共爬取到{len(alist)}个文件地址，即将开始下载')
+print(f'共爬取到{len(alist)}个文件地址，即将开始下载\n')
+time.sleep(3)
 
 img_url_num = 0
 success_num = 0
@@ -57,4 +58,6 @@ for a in alist:
 
 time_end = time.time()
 use_time = int(time_end - time_start)
-print(f'全部下载完成！共下载成功{success_num}个文件，失败{error_num}个文件，用时{use_time}秒')
+print(f'全部下载完成！共下载成功{success_num}个文件，失败{error_num}个文件，用时{use_time}秒\n')
+print('程序将在10秒后结束......')
+time.sleep(10)
