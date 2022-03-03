@@ -1,1 +1,0 @@
-start cmd /k py pcr_cg_spider_multithreading.py
