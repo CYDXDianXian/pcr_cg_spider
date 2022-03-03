@@ -14,4 +14,4 @@ pcr剧情CG爬虫
 
 1. 安装依赖：`install_requirements.bat`
 2. 运行爬虫程序：`run_pcr_cg_spider.bat`或`run_pcr_cg_spider_multithreading.bat`
-
+3. 如需自动转换成png格式，请切换到分支`auto_transcoding`
