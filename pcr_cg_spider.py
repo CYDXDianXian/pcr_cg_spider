@@ -23,7 +23,7 @@ resp = requests.get(url, headers = headers, proxies = proxy) # 以get方式请�
 if resp.status_code == 404:
     print(f"网页请求错误，错误代码：404")
     sys.exit() # 结束程序
-resp.encodin = 'utf-8'
+resp.encoding = 'utf-8'
 
 # print(resp.text)
 # 把源码交给bs

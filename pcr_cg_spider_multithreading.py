@@ -30,7 +30,7 @@ def get_urls():
     except:
         print('请求超时，请检查网络连接')
         sys.exit() # 结束程序
-    resp.encodin = 'utf-8'
+    resp.encoding = 'utf-8'
 
     tree = etree.HTML(resp.text)
     result = tree.xpath("/html/body/span/a/@href") # 通过xpath提取链接列表
